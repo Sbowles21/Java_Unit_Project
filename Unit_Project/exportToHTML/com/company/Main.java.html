@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.ArrayList</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Random</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">Scanner myscanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">ArrayList&lt;Minion1&gt; Minion1 = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+        <span class="s1">ArrayList&lt;Minion2&gt; Minion2 = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+        <span class="s1">ArrayList&lt;Boss&gt; Boss = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+        <span class="s1">Random r = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">count = </span><span class="s2">0</span><span class="s0">;</span>
+
+        <span class="s1">System.out.print(</span><span class="s3">&quot;~Hello to this fantasy world!~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">~You are here to create your own adventure!~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">while </span><span class="s1">(</span><span class="s0">true</span><span class="s1">) {</span>
+            <span class="s0">if </span><span class="s1">(count == </span><span class="s2">0</span><span class="s1">) {</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;~Now create the first Minion~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is the name of your minion? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">String Minion1_name = myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is their health? 100-1000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">heath1 = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(heath1 &lt; </span><span class="s2">100</span><span class="s1">) {</span>
+                    <span class="s1">heath1 = </span><span class="s2">100</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(heath1 &gt; </span><span class="s2">1000</span><span class="s1">) {</span>
+                    <span class="s1">heath1 = </span><span class="s2">1000</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What weapon will they have?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;&quot;&quot; 
+                                         
+                        1.Sword 
+                        2.Spear 
+                        3.Bow and Arrow 
+                        &quot;&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">weapon1 = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(weapon1 == </span><span class="s2">1</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">25 </span><span class="s1">- </span><span class="s2">10</span><span class="s1">) + </span><span class="s2">10</span><span class="s0">;</span>
+                    <span class="s1">Minion1.add(</span><span class="s0">new </span><span class="s1">Minion1(Minion1_name</span><span class="s0">, </span><span class="s1">heath1</span><span class="s0">, </span><span class="s3">&quot;Sword&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(weapon1 == </span><span class="s2">2</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">30 </span><span class="s1">- </span><span class="s2">15</span><span class="s1">) + </span><span class="s2">15</span><span class="s0">;</span>
+                    <span class="s1">Minion1.add(</span><span class="s0">new </span><span class="s1">Minion1(Minion1_name</span><span class="s0">, </span><span class="s1">heath1</span><span class="s0">, </span><span class="s3">&quot;Spear&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(weapon1 == </span><span class="s2">3</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">30 </span><span class="s1">- </span><span class="s2">10</span><span class="s1">) + </span><span class="s2">10</span><span class="s0">;</span>
+                    <span class="s1">Minion1.add(</span><span class="s0">new </span><span class="s1">Minion1(Minion1_name</span><span class="s0">, </span><span class="s1">heath1</span><span class="s0">, </span><span class="s3">&quot;Bow and Arrow&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">count +=</span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">if </span><span class="s1">(count==</span><span class="s2">1</span><span class="s1">) {</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;~Now create the second Minion ~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is the name of your minion? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">String Minion2_name = myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is their health? 100-1000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">heath2 = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(heath2 &lt; </span><span class="s2">100</span><span class="s1">) {</span>
+                    <span class="s1">heath2 = </span><span class="s2">100</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(heath2 &gt; </span><span class="s2">1000</span><span class="s1">) {</span>
+                    <span class="s1">heath2 = </span><span class="s2">1000</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What weapon will they have?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;&quot;&quot; 
+                                         
+                        1.Sword 
+                        2.Spear 
+                        3.Bow and Arrow 
+                        &quot;&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">weapon2 = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(weapon2 == </span><span class="s2">1</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">25 </span><span class="s1">- </span><span class="s2">10</span><span class="s1">) + </span><span class="s2">10</span><span class="s0">;</span>
+                    <span class="s1">Minion2.add(</span><span class="s0">new </span><span class="s1">Minion2(Minion2_name</span><span class="s0">, </span><span class="s1">heath2</span><span class="s0">, </span><span class="s3">&quot;Sword&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(weapon2 == </span><span class="s2">2</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">25 </span><span class="s1">- </span><span class="s2">10</span><span class="s1">) + </span><span class="s2">10</span><span class="s0">;</span>
+                    <span class="s1">Minion2.add(</span><span class="s0">new </span><span class="s1">Minion2(Minion2_name</span><span class="s0">, </span><span class="s1">heath2</span><span class="s0">, </span><span class="s3">&quot;Spear&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(weapon2 == </span><span class="s2">3</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">25 </span><span class="s1">- </span><span class="s2">10</span><span class="s1">) + </span><span class="s2">10</span><span class="s0">;</span>
+                    <span class="s1">Minion2.add(</span><span class="s0">new </span><span class="s1">Minion2(Minion2_name</span><span class="s0">, </span><span class="s1">heath2</span><span class="s0">, </span><span class="s3">&quot;Bow and Arrow&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">count += </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">if </span><span class="s1">(count==</span><span class="s2">2</span><span class="s1">) {</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;~Now Create the boss ~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is the name of your Boss? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">String Boss_name = myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What is their health? 10,000-100,000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">Bossheath = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(Bossheath &lt; </span><span class="s2">10000</span><span class="s1">) {</span>
+                    <span class="s1">Bossheath = </span><span class="s2">10000</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(Bossheath &gt; </span><span class="s2">100000</span><span class="s1">) {</span>
+                    <span class="s1">Bossheath = </span><span class="s2">100000</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">What weapon will they have?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;&quot;&quot; 
+                                         
+                        1.Vindicator's Cleaver 
+                        2.Hailstorm Harpoon 
+                        3.Mourning Flame 
+                        &quot;&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">Bossweapon = myscanner.nextInt()</span><span class="s0">;</span>
+                <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(Bossweapon == </span><span class="s2">1</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">150 </span><span class="s1">- </span><span class="s2">100</span><span class="s1">) + </span><span class="s2">100</span><span class="s0">;</span>
+                    <span class="s1">Boss.add(</span><span class="s0">new </span><span class="s1">Boss(Boss_name</span><span class="s0">, </span><span class="s1">Bossheath</span><span class="s0">, </span><span class="s3">&quot;Sword&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(Bossweapon == </span><span class="s2">2</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">175 </span><span class="s1">- </span><span class="s2">125</span><span class="s1">) + </span><span class="s2">100</span><span class="s0">;</span>
+                    <span class="s1">Boss.add(</span><span class="s0">new </span><span class="s1">Boss(Boss_name</span><span class="s0">, </span><span class="s1">Bossheath</span><span class="s0">, </span><span class="s3">&quot;Sword&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(Bossweapon == </span><span class="s2">3</span><span class="s1">) {</span>
+                    <span class="s0">int </span><span class="s1">random_damage = r.nextInt(</span><span class="s2">200 </span><span class="s1">- </span><span class="s2">100</span><span class="s1">) + </span><span class="s2">100</span><span class="s0">;</span>
+                    <span class="s1">Boss.add(</span><span class="s0">new </span><span class="s1">Boss(Boss_name</span><span class="s0">, </span><span class="s1">Bossheath</span><span class="s0">, </span><span class="s3">&quot;Sword&quot;</span><span class="s0">, </span><span class="s1">random_damage))</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">for </span><span class="s1">(Minion1 m1 : Minion1) {</span>
+                    <span class="s1">System.out.print(m1.Name + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m1.Health + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m1.Weapon + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m1.Weapon_damage)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">for </span><span class="s1">(Minion2 m2 : Minion2) {</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+ m2.Name + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m2.Health + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m2.Weapon + </span><span class="s3">&quot; &quot; </span><span class="s1">+ m2.Weapon_damage)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">for </span><span class="s1">(Boss b : Boss) {</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+ b.Name + </span><span class="s3">&quot; &quot; </span><span class="s1">+ b.Health + </span><span class="s3">&quot; &quot; </span><span class="s1">+ b.Weapon + </span><span class="s3">&quot; &quot; </span><span class="s1">+ b.Weapon_damage)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s0">break;</span>
+        <span class="s1">}</span>
+        <span class="s0">while</span><span class="s1">(</span><span class="s0">true</span><span class="s1">){</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;~What would you like to do?~&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;&quot;&quot; 
+                     
+                    1.Create 
+                    2.Edit 
+                    3.Delete 
+                    &quot;&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">int </span><span class="s1">input  myscanner.nextLine()</span><span class="s0">;</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;&quot;&quot; 
+                    ~Where do you want to go?~ 
+                     
+                    1.Hollowfair 
+                    2.Rusthollow 
+                    3.Falsewallow 
+                    4.Oxhelm 
+                    5.Dravin 
+                    &quot;&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">int </span><span class="s1">first_town = myscanner.nextInt()</span><span class="s0">;</span>
+            <span class="s1">myscanner.nextLine()</span><span class="s0">;</span>
+            <span class="s0">if</span><span class="s1">(first_town == </span><span class="s2">1</span><span class="s1">){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">else if</span><span class="s1">(first_town == </span><span class="s2">2</span><span class="s1">){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">else if</span><span class="s1">(first_town == </span><span class="s2">3</span><span class="s1">){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">else if</span><span class="s1">(first_town == </span><span class="s2">4</span><span class="s1">){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">else if</span><span class="s1">(first_town == </span><span class="s2">5</span><span class="s1">){</span>
+
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
