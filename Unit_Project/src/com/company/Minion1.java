@@ -11,4 +11,10 @@ public class Minion1 {
         Weapon = weapon;
         Weapon_damage = weapon_damage;
     }
+    public void update(String name, int health, String weapon, int weapon_damage){
+        this.Name = name;
+        this.Health = health;
+        this.Weapon = weapon;
+        this.Weapon_damage = weapon_damage;
+    }
 }
